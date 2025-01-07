@@ -2,8 +2,6 @@
     font-family: "Open Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
 }
 
 nav {
@@ -18,7 +16,7 @@ nav {
 }
 
 .nav-title {
-    font-weight: 800px;
+    font-weight: 800;
     font-size: 45px;
 }
 
@@ -54,19 +52,21 @@ nav ul {
 .banner-greetings {
     color: grey;
     font-size: 45px;
-    font-weight: 600px;
+    font-weight: 600;
 }
-.banner-description{
+
+.banner-description {
     color: grey;
 }
+
 .banner-title {
     font-weight: bold;
     font-size: 85px;
 }
 
 .banner-img {
-    width: 580px;
-
+    width: 100%;
+    max-width: 580px;
 }
 
 .banner {
@@ -77,6 +77,7 @@ nav ul {
 
 .banner-content {
     max-width: 580px;
+    width: 100%;
 }
 
 .header {
@@ -84,30 +85,102 @@ nav ul {
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 }
-.section-title{
+
+.section-title {
     font-size: 35px;
     font-weight: bold;
     color: black;
+    text-align: center;
 }
-.section-des{
-    color: grey;
 
+.section-des {
+    color: grey;
 }
-.secondary-bg{
-    background-color: whitesmoke;
-    
+
+.secondary-bg {
+    background-color: #f4f4f4;
 }
-.about{
+
+.about {
     border-radius: 10px;
     padding: 130px 150px;
     text-align: center;
-    margin-top: 130px;
 }
-main{
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 40px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-container {
+        flex-direction: column;
+    }
+    .about-items {
+        flex-direction: column;
+    }
+}
+
+main {
     max-width: 1140px;
     margin: 0 auto;
 }
-.about-items{
+
+.about-items {
     display: flex;
     justify-content: space-around;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    gap: 24px;
+}
+
+.skill {
+    padding: 30px;
+    
+    box-shadow: 0px 6px 50px 0px rgb(206, 205, 205);
+}
+
+main section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.resume-container {
+    display: flex;
+    gap: 24px;
+}
+
+.experience-description,
+.experience-sub-title {
+    color: grey;
+}
+.resume-download-cv{
+    margin-top: 50px;
+}
+footer{
+    padding: 130px;
+    display: flex;
+    gap: 100px;
+    
+}
+.footer-column{
+    width: 50%;
+}
+input[type="text"], footer input[type="email"], footer textarea{
+    height:64px ;
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    width: 100px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border: none;
 }
